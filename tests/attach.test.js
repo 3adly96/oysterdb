@@ -1,5 +1,5 @@
 const Oyster = require('../index');
-const oyster = new Oyster({ url: "redis://default:5x2DNgNcx2K4RqQnusjnfF3f@104.248.33.48:6011", prefix: "none" });
+const oyster = new Oyster({ url: "redis://localhost:6111", prefix: "none" });
 const bigRunner = require('./bigRunner.helper')
 const indexLabel = require('./index-label.helper');
 
