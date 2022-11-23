@@ -1,14 +1,9 @@
-# featherdb-redis
+# oyster-db
 
-A Redis that is utilized with Axion functions like OysterDB.
-
-<aside>
-👉 oysterdb docker image is mandatory for this package to work.
-
-</aside>
+OysterDB provides an innovative solution for storing enormous data sets properly, building complex data relations and ensuring object relation integrity. In addition, OysterDB provides Flexible data modelling, Distributed ACID transactions and Composite indexing. It is a secure, scalable and fast Data API for data-intensive and mission-critical applications.
 
 ```jsx
-const Oyster = require('oysterdb');
+const Oyster = require('oyster-db');
 const oyster = new Oyster({ 
 	url: "redis://127.0.0.1:6379", 
 	prefix: "none" 
@@ -62,5 +57,3 @@ oyster.call('add_block',{
 	}
 }
 ```
-
-# HYPERVIEW

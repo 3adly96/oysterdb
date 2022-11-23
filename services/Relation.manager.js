@@ -271,8 +271,10 @@ module.exports = class RelationManager {
 
     async destroyRelation({relationType, blockId, label}){
         relationType = this._pluralFixer(relationType);
-        let key =this[`${relationType}Key`]({id: blockId, label})
+        let key = this[`${relationType}Key`]({id: blockId, label})
+        let rxKey = this._relMatrixKey(blockId)
         let res = await this.cache.key.delete({key});
+        await this.cache.key.delete({key: rxKey});
         return {ok: true};
     }
 
