@@ -50,4 +50,7 @@ test('a block should be added and deleted', async () => {
     }
     expect(res).toEqual({ok: true});
 });
-oyster.close()
+afterAll(done => {
+    oyster.close()
+    done();
+})
