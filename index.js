@@ -16,5 +16,9 @@ module.exports = class Oyster{
                 return err.message;
             }
         }
+
+        close(fn, args) {
+            this.cache.redisClient.quit()
+        }
     }
 

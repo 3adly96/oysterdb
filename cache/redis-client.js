@@ -12,10 +12,6 @@ const createClient = ({ url }) => {
     console.log('error', error);
   });
 
-  redis.on('end', () => {
-    console.log('shutting down service due to lost Redis connection');
-  });
-
   return redis;
 }
 

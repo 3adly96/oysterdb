@@ -6,9 +6,6 @@ const keyCheck = (key) => {
     if (!key) throw Error('Cache Key is missing');
 }
 
-
-
-
 module.exports = ({ prefix, url}) => {
 
     if (!prefix || !url) throw Error('missing in memory arguments');
@@ -17,6 +14,7 @@ module.exports = ({ prefix, url}) => {
     const redisClient = require('./redis-client').createClient({url});
 
     return {
+        redisClient,
         pipe: {
             commands: async(arr)=>{
                 return await redisClient

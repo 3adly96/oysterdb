@@ -48,6 +48,6 @@ test('a block should be added and deleted', async () => {
             expect(error).toBeNull();
         });
     }
-    expect().
     expect(res).toEqual({ok: true});
 });
+oyster.close()
