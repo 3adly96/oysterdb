@@ -132,7 +132,8 @@ module.exports = class RelationManager {
             let segs = item.split('~');
             let key  = defaultField?defaultField:segs[0];
             let scoreSegs = [];
-            let defaultScore = dScore || parseFloat(`0.${Number(process.hrtime.bigint())}`);
+            let defaultScore = dScore || parseFloat(`0.${Date.now()}1`);
+            // let defaultScore = dScore || parseFloat(`0.${Number(process.hrtime.bigint())}`);
 
             if(!segs[1]){
                 /** 
